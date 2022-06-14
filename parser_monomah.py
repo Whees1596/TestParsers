@@ -19,7 +19,6 @@ def get_data(url):
     soup = BeautifulSoup(src, "lxml")
     shops = soup.find_all("div", class_="shop")
     for shop in shops:
-        print(shop)
         try:
             address = shop.find("p", class_="name").text
         except Exception:
